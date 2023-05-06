@@ -1,0 +1,64 @@
+{
+  "name": "to-near-by",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/to-near-by",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/to-near-by",
+        "outputPath": "dist/apps/to-near-by"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/to-near-by"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "to-near-by:build",
+        "dev": true,
+        "port": 4800
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "to-near-by:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "to-near-by:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "to-near-by:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/to-near-by"],
+      "options": {
+        "jestConfig": "apps/to-near-by/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/to-near-by/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
