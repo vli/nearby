@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tonearby/react-ui": ["libs/react-ui/src/index.ts"],
-      "@tonearby/react-ui/server": ["libs/react-ui/src/server.ts"]
+      "@tonearby/ui": ["libs/rui/src/index.ts"],
+      "@tonearby/ui/server": ["libs/rui/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

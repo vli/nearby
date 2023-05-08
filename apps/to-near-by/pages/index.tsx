@@ -173,12 +173,13 @@ export function Index() {
         {/* <!-- Medias--> */}
         <figure>
           <Image
-            src="img/aleksandar-jason-a562ZEFKW8I-unsplash-2000x1000.jpg"
+            width="500"
+            height="500"
+            src="/images/tonearby.png"
             alt="Minimal landscape"
           />
           <figcaption>
-            Image from
-            <a href="https://unsplash.com/photos/a562ZEFKW8I" target="_blank">unsplash.com</a>
+            Image            
           </figcaption>
         </figure>
       </section>

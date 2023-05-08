@@ -21,8 +21,9 @@ $enable-semantic-container: true;
 // Enable .classes
 $enable-classes: false;
 
-$primary: #039be5;
 
+
+@import "src/1-tokens/styles/_colors.scss";
 @import "@picocss/pico/scss/pico";
 
 

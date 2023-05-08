@@ -22,26 +22,31 @@ Most code should live in libs - applications are as "containers" that link, bund
 
 
 Generated libraries
-`nx g @nx/next:lib react-ui --publishable --importPath=@tonearby/react-ui`
+`nx g @nx/next:lib rui --publishable --importPath=@tonearby/rui  --dry-run` 
+Note: option `--dry-run` means nnothing is generated.
+
+
+nx g @nx/react:lib to-ui --publishable --importPath=@tonearby/ui --dry-run
 
 ## Components
 
-Shared react-ui components are divided based on Atomic Design levels,
+Shared react ui components from `rui-library` could be used in multiple applications and are divided based on Atomic Design levels.
 Generated shared components:
 
-- `nx g @nx/next:component icons --directory elements --project=react-ui --style=scss`
-- `nx g @nx/next:component cards --directory patterns --project=react-ui --style=scss`
-- `nx g @nx/next:component header --directory blocks --project=react-ui --style=scss`
-- `nx g @nx/next:component layout --directory templates --project=react-ui --style=scss`
+- `nx g @nx/next:component styles --directory 1-tokens --project=rui --style=scss`
+- `nx g @nx/next:component icons --directory 2-elements --project=rui --style=scss`
+- `nx g @nx/next:component cards --directory 3-patterns --project=rui --style=scss`
+- `nx g @nx/next:component header --directory 4-blocks --project=rui --style=scss`
+- `nx g @nx/next:component layout --directory 5-templates --project=rui --style=scss`
 
-Application specific components:
-Run `nx g @nx/next:component logo --project=to-near-by --style=scss`
+Application specific components are located in main project:
+Generated application cmponents `nx g @nx/next:component logo --project=to-near-by --style=scss`
 
 ## Development server
 
 Run `nx serve to-near-by` for a dev server. 
 
-Navigate to http://localhost:4800/. The app will automatically reload if you change any of the source files.
+Navigate to [http://localhost:4800/](http://localhost:4800/). The app will automatically reload if you change any of the source files.
 
 ## Build
 
@@ -52,7 +57,7 @@ The build artifacts will be stored in the `dist/` directory. Use the `--prod` fl
 ## Running unit tests
 
 Run `nx test to-near-by` to execute the unit tests via [Jest](https://jestjs.io).
-Run `nx test react-ui` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test rui` to execute the unit tests via [Jest](https://jestjs.io).
 
 Run `nx affected:test` to execute the unit tests affected by a change.
 
@@ -68,6 +73,20 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 Run `nx graph` to see a diagram of the dependencies of your projects.
 
+
+## Storybook
+
+Storybook is added to rui components: 
+```
+yarn add -D @nx/webpack
+yarn add -D @nx/storybook
+yarn add -D @storybook/addon-styling sass
+nx g @nx/storybook:configuration rui --tsConfiguration=true --uiFramework @storybook/react--webpack5
+```
+
+`nx run react-ui:storybook`
+
+Navigate to [http://localhost:4900/](http://localhost:4900/)
 
 ## Further help
 

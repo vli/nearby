@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 import Logo from '../../components/logo/logo';
-import { Header } from '@tonearby/react-ui';
+import { Header } from '@tonearby/ui';
 
 /* eslint-disable-next-line */
 export interface HomeProps {}

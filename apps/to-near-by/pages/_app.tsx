@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import '../../../libs/react-ui/src/1-tokens/styles/global-styles.scss';
+import '../../../libs/rui/global-styles.scss';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (

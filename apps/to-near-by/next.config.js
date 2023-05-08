@@ -15,7 +15,7 @@ const nextConfig = {
   },
   sassOptions: {
     fiber: false,
-    includePaths: [path.join(__dirname, '../../libs/react-ui/src/1-tokens/styles/global-styles.scss')],
+    includePaths: [path.join(__dirname, '../../libs/rui/global-styles.scss')],
   },
 };
 
