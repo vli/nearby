@@ -1,0 +1,17 @@
+.container {
+
+    .swatch{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        div{
+
+            height: 2rem;
+            width: 2rem;
+            border: 1px solid var(--form-element-border-color);
+            border-radius: 360px;
+        }
+    }
+ 
+}

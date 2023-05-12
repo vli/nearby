@@ -23,10 +23,9 @@ Most code should live in libs - applications are as "containers" that link, bund
 
 Generated libraries
 `nx g @nx/next:lib rui --publishable --importPath=@tonearby/rui  --dry-run` 
+`nx g @nx/next:lib rdata --publishable --importPath=@tonearby/rdata  --dry-run` 
 Note: option `--dry-run` means nnothing is generated.
 
-
-nx g @nx/react:lib to-ui --publishable --importPath=@tonearby/ui --dry-run
 
 ## Components
 

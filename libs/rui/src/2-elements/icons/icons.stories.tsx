@@ -1,11 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Icons } from './icons';
 
-const meta: Meta<typeof Icons> = {
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
-   * to learn how to generate automatic titles
-   */
+const meta: Meta<typeof Icons> = {  
   title: '2 Elements / Icons',
   component: Icons,
 

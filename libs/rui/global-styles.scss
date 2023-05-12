@@ -21,12 +21,20 @@ $enable-semantic-container: true;
 // Enable .classes
 $enable-classes: false;
 
-
-
 @import "src/1-tokens/styles/_colors.scss";
 @import "@picocss/pico/scss/pico";
+@import "src/1-tokens/styles/_light.scss";
+@import "src/1-tokens/styles/_dark.scss";
+@import "src/1-tokens/styles/_typography.scss";
 
 
 body {
-    background: var(--background-color);
+    background: var(--backgprimaryround-color);
+}
+
+.primary {
+    background: var(--primary);
+}
+.color {
+    background: var(--color);
 }
