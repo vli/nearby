@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tonearby/ui": ["libs/rui/src/index.ts"],
-      "@tonearby/ui/server": ["libs/rui/src/server.ts"]
+      "@tonearby/rdata": ["libs/rdata/src/index.ts"],
+      "@tonearby/rdata/server": ["libs/rdata/src/server.ts"],
+      "@tonearby/rui": ["libs/rui/src/index.ts"],
+      "@tonearby/rui/server": ["libs/rui/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

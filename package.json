@@ -11,13 +11,16 @@
   "dependencies": {
     "@nx/next": "16.1.1",
     "@picocss/pico": "^1.5.10",
+    "axios": "^1.4.0",
     "core-js": "^3.6.5",
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-query": "^3.39.3",
     "regenerator-runtime": "0.13.7",
     "sass": "^1.62.1",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "zustand": "^4.3.8"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
@@ -34,7 +37,6 @@
     "@nx/webpack": "^16.1.1",
     "@nx/workspace": "16.1.1",
     "@rollup/plugin-url": "^7.0.0",
-    "storybook-theme-css-vars": "^0.0.9",
     "@storybook/addon-a11y": "^7.0.9",
     "@storybook/addon-docs": "^7.0.9",
     "@storybook/addon-essentials": "^7.0.9",
@@ -71,6 +73,7 @@
     "nx": "16.1.1",
     "prettier": "^2.6.2",
     "react-test-renderer": "18.2.0",
+    "storybook-theme-css-vars": "^0.0.9",
     "swc-loader": "0.1.15",
     "ts-jest": "29.1.0",
     "ts-node": "10.9.1",

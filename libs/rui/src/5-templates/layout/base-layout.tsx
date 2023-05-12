@@ -1,9 +1,9 @@
-import styles from './layout.module.scss';
+import styles from './base-layout.module.scss';
 
 /* eslint-disable-next-line */
-export interface LayoutProps {}
+export interface BaseLayoutProps {}
 
-export function Layout(props: LayoutProps) {
+export function BaseLayout(props: LayoutProps) {
   return (
     <div className={styles['container']}>
       <h1>Welcome to Layout!</h1>
@@ -11,4 +11,4 @@ export function Layout(props: LayoutProps) {
   );
 }
 
-export default Layout;
+export default BaseLayout;
