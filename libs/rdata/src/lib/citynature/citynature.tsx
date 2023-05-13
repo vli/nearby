@@ -17,7 +17,7 @@ async function fetchData(
   try {
     const response = city
       ? await HTTPClient.get(`${DATA_URL}?cityid=${city}`)
-      : await HTTPClient.get(`${DATA_URL}?cityid=5`);
+      : await HTTPClient.get(`${DATA_URL}?cityid=5`); //en = 4661
     checkStatus(response);
     console.debug('PlacesInterface FETCH when city', city);
     console.debug('PlacesInterface FETCH data', response.data);

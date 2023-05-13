@@ -39,6 +39,7 @@ Generated rui components:
 - `nx g @nx/next:component icons --directory 2-elements --project=rui --style=scss --dry-run`
 - `nx g @nx/next:component cards --directory 3-patterns --project=rui --style=scss --dry-run`
 - `nx g @nx/next:component header --directory 4-blocks --project=rui --style=scss --dry-run`
+- `nx g @nx/next:component map --directory 4-blocks --project=rui --style=scss --dry-run`
 - `nx g @nx/next:component layout --directory 5-templates --project=rui --style=scss --dry-run`
 
 React data access components are based on react-query and .

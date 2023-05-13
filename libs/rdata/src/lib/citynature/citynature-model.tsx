@@ -30,9 +30,9 @@ export type PropertyType = {
   
   export interface PlacesInterface {
     ID: number;
-    title?: string;
-    url?: string;
-    routes?: RouteInterface[] | [];
+    title: string;
+    url: string;
+    routes?: RouteInterface;
     points?: PointInterface[] | [];
   }
   

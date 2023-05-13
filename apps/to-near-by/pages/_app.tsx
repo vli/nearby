@@ -5,9 +5,7 @@ import Head from 'next/head';
 import { StrictMode, useState } from 'react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import '@tonearby/rui';
-
-// rui/global-styles.scss';
+import '../../../libs/rui/global-styles.scss';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(

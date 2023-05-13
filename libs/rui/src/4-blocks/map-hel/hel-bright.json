@@ -1,0 +1,12 @@
+{
+  "tilejson": "2.0.0",
+  "name": "SERVICE MAP based on OSM BRIGHT",
+  "attribution": "<a href=\"https://www.openmaptiles.org/\" target=\"_blank\">&copy; OpenMapTiles</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>",
+  "minzoom": 0,
+  "maxzoom": 20,
+  "bounds": [19.02427, 59.28783, 31.6159, 70.09959],
+  "format": "png",
+  "type": "baselayer",
+  "tiles": ["http://tiles.hel.ninja/styles/hel-osm-bright/{z}/{x}/{y}.png"],
+  "center": [25.320085, 64.69371000000001, 7]
+}
