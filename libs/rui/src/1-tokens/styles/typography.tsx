@@ -78,7 +78,7 @@ const Inline = ({ text }: TypographyProps) => {
         Inline
       </Text>
       <hr />
-      <div class="grid">
+      <div>
         <div>
           <p>
             <abbr title="Abbreviation">Abbr.</abbr> <code>abbr</code>
