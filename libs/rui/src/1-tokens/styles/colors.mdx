@@ -1,18 +1,19 @@
 {/* Colors.mdx */}
 
-import { Canvas, Meta,  Controls} from '@storybook/blocks';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
 
 import * as ColorsStories from './colors.stories.tsx';
 
-
 {/* <Meta title="1 Tokens / Colors" /> */}
+
 <Meta of={ColorsStories} />
 
 # Colors
 
 ## Base
 
-Colors base values are defined as SCSS variables in _colors.scss:
+Colors base values are defined as SCSS variables in \_colors.scss:
+
 ```
 $primary-hue: 195 !default;
 $primary-50: hsl($primary-hue, 90%, 94%) !default;
@@ -28,12 +29,14 @@ $primary-900: hsl($primary-hue, 100%, 15%) !default;
 ```
 
 Same goes for
+
 - $grey
 - $amber
 - $green
 - $red
 
-Color base values could be overwritten in _colors.scss
+Color base values could be overwritten in \_colors.scss
+
 ```
 $primary: #e53935;
 $primary-500: #f44336;
@@ -43,28 +46,22 @@ $primary-700: #d32f2f;
 
 ## Light & dark themes
 
-Colors that are shown in Userinterface are defined in themes 
-- _light.scss
-- _dark.scss
+Colors that are shown in Userinterface are defined in themes
 
-those are based on previous base values and put to the css variables: 
+- \_light.scss
+- \_dark.scss
 
-``` 
+those are based on previous base values and put to the css variables:
+
+```
 --primary: #{$primary-600};
 --primary-hover: #{$primary-700};
 --primary-focus: #{rgba($primary-600, 0.125)};
 --primary-inverse: #{$white};
 ```
+
 ## Usage
 
 Colors values are accessed by css variables
 
 <Canvas of={ColorsStories.Base} />
-
-
-
-
-
-
-
-

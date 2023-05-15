@@ -1,26 +1,29 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)', '../src/**/*.mdx',],
-  addons: ['@storybook/addon-essentials', '@nx/react/plugins/storybook',
-  'storybook-theme-css-vars',
-  '@storybook/addon-a11y',
-  {
-    name: '@storybook/addon-styling',
-    options: {
-      sass: {
-        // Require your Sass preprocessor here
-        implementation: require('sass'),
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)', '../src/**/*.mdx'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@nx/react/plugins/storybook',
+    'storybook-theme-css-vars',
+    '@storybook/addon-a11y',
+    {
+      name: '@storybook/addon-styling',
+      options: {
+        sass: {
+          // Require your Sass preprocessor here
+          implementation: require('sass'),
+        },
       },
     },
-  },],
+  ],
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
   },
   docs: {
     //👇 See the table below for the list of supported options
-    autodocs:  true,
+    autodocs: true,
     defaultName: 'Documentation',
   },
 };

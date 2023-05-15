@@ -1,21 +1,22 @@
-  {/* Typography.mdx */}
+{/* Typography.mdx */}
 
-import { Canvas, Meta,  Controls} from '@storybook/blocks';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
 
 import * as TypographyStories from './typography.stories.tsx';
 
-
 {/* <Meta title="1 Tokens / Typography" /> */}
+
 <Meta of={TypographyStories} />
 
 # Typography
 
 ## Base
-Typography are defined as SCSS variables in _typography.scss:
+
+Typography are defined as SCSS variables in \_typography.scss:
 
 ## Headings:
 
-Heading styles H1-H6 are responsive so that 
+Heading styles H1-H6 are responsive so that
 
 Inside a hgroup all margin-bottom are collapsed and the :last-child is muted.
 
@@ -31,9 +32,3 @@ Inside a hgroup all margin-bottom are collapsed and the :last-child is muted.
 Examples of Typography
 
 <Canvas of={TypographyStories.Primary} />
-
-
-
-
-
-

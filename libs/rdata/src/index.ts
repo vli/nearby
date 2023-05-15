@@ -2,3 +2,4 @@
 
 export * from './lib/citynature/citynature-model';
 export * from './lib//citynature/citynature';
+export * from './lib/trail-store/trail-store';

@@ -1,15 +1,10 @@
-
-import axios, {AxiosResponse, HeadersDefaults } from 'axios';
+import axios, { AxiosResponse, HeadersDefaults } from 'axios';
 
 export const checkStatus = (response: AxiosResponse) => {
-  if (
-    response &&
-    ((response.status >= 400))
-  ) {
+  if (response && response.status >= 400) {
     throw new Error(`Network response was not ok ${response.statusText}`);
   }
 };
-
 
 const HTTPClient = axios.create();
 

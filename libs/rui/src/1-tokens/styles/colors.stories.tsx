@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Colors } from './colors';
 
-const meta: Meta<typeof Colors> = {  
+const meta: Meta<typeof Colors> = {
   title: '1 Tokens / Colors',
   component: Colors,
 };
@@ -13,6 +13,5 @@ type Story = StoryObj<typeof Colors>;
 export const Base: Story = {
   render: () => <Colors />,
 
-  args: {    
-  },
+  args: {},
 };

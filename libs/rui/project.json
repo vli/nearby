@@ -22,7 +22,7 @@
         "entryFile": "libs/rui/src/index.ts",
         "external": ["react", "react-dom", "react/jsx-runtime"],
         "rollupConfig": "@nx/react/plugins/bundle-rollup",
-        "compiler": "swc", 
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/rui/README.md",

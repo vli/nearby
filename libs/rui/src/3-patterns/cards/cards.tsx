@@ -5,9 +5,9 @@ export interface CardsProps {}
 
 export function Cards(props: CardsProps) {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to Cards!</h1>
-    </div>
+    <article>
+      <h1>This is card</h1>
+    </article>
   );
 }
 

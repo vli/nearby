@@ -1,14 +1,17 @@
+import Header from '../../4-blocks/header/header';
 import styles from './base-layout.module.scss';
 
 /* eslint-disable-next-line */
-export interface BaseLayoutProps {}
-
-export function BaseLayout(props: LayoutProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to Layout!</h1>
-    </div>
-  );
+export interface BaseLayoutProps {
+  children?: React.ReactNode;
 }
 
-export default BaseLayout;
+export function BaseLayout({ children }: BaseLayoutProps) {
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+      <footer />
+    </>
+  );
+}

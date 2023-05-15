@@ -6,6 +6,7 @@ import { StrictMode, useState } from 'react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import '../../../libs/rui/global-styles.scss';
+import { BaseLayout } from '@tonearby/rui';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -23,7 +24,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to to-near-by!</title>
+        <title>To Near By!</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -43,14 +44,14 @@ function CustomApp({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <main className="app">
+      <BaseLayout>
         <QueryClientProvider client={queryClient}>
           <StrictMode>
             <Component {...pageProps} />
           </StrictMode>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
-      </main>
+      </BaseLayout>
     </>
   );
 }

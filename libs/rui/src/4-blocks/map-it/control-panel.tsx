@@ -5,8 +5,8 @@ function ControlPanel() {
     <div className="control-panel">
       <h3>Marker, Popup, NavigationControl and FullscreenControl </h3>
       <p>
-        Map showing top 20 most populated cities of the United States. Click on a marker to learn
-        more.
+        Map showing top 20 most populated cities of the United States. Click on
+        a marker to learn more.
       </p>
       <p>
         Data source:{' '}

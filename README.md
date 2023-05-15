@@ -11,8 +11,8 @@ Each apps have all pages in `/pages` directory
 Generated pages:
 
 - `nx generate @nx/next:page --name=home --style=scss`
-- `nx generate @nx/next:page --name=nature --style=scss`
-- `nx generate @nx/next:page --name=events --style=scss`
+- `nx generate @nx/next:page --name=route --style=scss`
+- `nx generate @nx/next:page --name=trail --style=scss`
 
 ## Libraries
 
@@ -33,23 +33,31 @@ Note: option `--dry-run` means nnothing is generated.
 Shared react ui components from `rui/rdata` libraries could be used in multiple applications.
 
 React UI components and styles are divided based on Atomic Design levels.
+
+- tokens
+- elements
+- patterns
+- blocks
+- temlates
+
 Generated rui components:
 
 - `nx g @nx/next:component styles --directory 1-tokens --project=rui --style=scss --dry-run`
 - `nx g @nx/next:component icons --directory 2-elements --project=rui --style=scss --dry-run`
 - `nx g @nx/next:component cards --directory 3-patterns --project=rui --style=scss --dry-run`
+- `nx g @nx/next:component select-theme --directory 3-patterns --project=rui --style=scss --dry-run`
 - `nx g @nx/next:component header --directory 4-blocks --project=rui --style=scss --dry-run`
 - `nx g @nx/next:component map --directory 4-blocks --project=rui --style=scss --dry-run`
 - `nx g @nx/next:component layout --directory 5-templates --project=rui --style=scss --dry-run`
 
-React data access components are based on react-query and .
-Generated rui components:
+React data access components are based on react-query and Zustand.
+Generated React query components:
+
 - `nx g @nx/next:component citynature --project=rdata --style=none --dry-run`
 
-Application specific components are located in main project:
-Generated application cmponents 
+Generated Zustand cmponents
 
-- `nx g @nx/next:component logo --project=to-near-by --style=scss`
+- `nx g @nx/next:component trail-store --project=rdata --style=none --dry-run`
 
 ## Development server
 
@@ -69,6 +77,16 @@ Run `nx test to-near-by` to execute the unit tests via [Jest](https://jestjs.io)
 Run `nx test rui` to execute the unit tests via [Jest](https://jestjs.io).
 
 Run `nx affected:test` to execute the unit tests affected by a change.
+
+## UnitTest/Lint/Format(Prettier) for ALL apps and libs
+
+```
+nx run-many --all --target=test
+
+nx run-many --all --target=lint
+
+nx format:check or [nx format:write
+```
 
 ## Running end-to-end tests
 

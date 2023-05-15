@@ -1,7 +1,11 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+header.header {
+  background: var(--background-color);
+  max-width: 100vw !important;
+  padding: 0 calc(2 * var(--block-spacing-horizontal)) !important;
+}
+
+li.brand {
+  display: inline-flex;
+  column-gap: var(--spacing);
+  align-items: center;
+}
