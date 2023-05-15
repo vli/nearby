@@ -1,5 +1,7 @@
 //@ts-check
 
+process.env.I18NEXT_DEFAULT_CONFIG_PATH = `${__dirname}/next-i18next.config.js`;
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { withNx } = require('@nx/next/plugins/with-nx');
 const path = require('path');
@@ -15,7 +17,7 @@ const nextConfig = {
   },
   sassOptions: {
     fiber: false,
-    includePaths: [path.join(__dirname, '../../libs/react-ui/src/1-tokens/styles/global-styles.scss')],
+    includePaths: [path.join(__dirname, '../../libs/rui/global-styles.scss')],
   },
 };
 

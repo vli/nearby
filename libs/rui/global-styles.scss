@@ -1,0 +1,45 @@
+/* 
+** See https://github.com/picocss/pico/blob/master/css/themes/default.css
+** for configurations to be overwritten
+*/
+
+/* Custom Class-less version for React */
+
+// Set the root element
+$semantic-root-element: '#__next';
+/*
+Containers
+#root > header,
+#root > main,
+#root > footer {
+}
+*/
+
+// Enable <header>, <main>, <footer> inside $semantic-root-element as containers
+$enable-semantic-container: true;
+
+// Enable .classes
+$enable-classes: false;
+
+@import 'src/1-tokens/styles/_colors.scss';
+@import '@picocss/pico/scss/pico';
+@import 'src/1-tokens/styles/_light.scss';
+@import 'src/1-tokens/styles/_dark.scss';
+
+@import 'src/1-tokens/styles/_buttons.scss';
+@import 'src/1-tokens/styles/_containers.scss';
+@import 'src/1-tokens/styles/_grid.scss';
+@import 'src/1-tokens/styles/_typography.scss';
+
+@import 'mapbox-gl/dist/mapbox-gl.css';
+
+body {
+  background: var(--backgprimaryround-color);
+}
+
+.primary {
+  background: var(--primary);
+}
+.color {
+  background: var(--color);
+}
