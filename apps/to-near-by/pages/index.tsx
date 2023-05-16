@@ -18,14 +18,20 @@ type LocationType = {
   url: string;
   coordinates?: [number, number];
 };
+type LocationCardType = {
+  ID: number;
+  selectedCityId: string;
+  name: string;
+  url: string;
+  coordinates?: [number, number];
+};
 
-const LocationCard = ({ ID, name, url, coordinates }: LocationType) => {
+const LocationCard = ({ ID, name, url, selectedCityId, coordinates }: LocationCardType) => {
   const { t } = useTranslation('common');
   return (
     <article className={styles['location-card']}>
       <Link
-        href="[...id]"
-        as={`/trail?id=${ID}`}
+        href= {`/trail?cityId=${selectedCityId}&id=${ID}`}
         aria-describedby={t('Select trail')}
       >
         <hgroup>
@@ -50,14 +56,13 @@ export function Events(props: EventsProps) {
 
   const [queryEnabled, setQueryEnabled] = useState(true);
 
-  const {
-    cityOptions,
-    selectedCity,
-    setSelectedCity,
-  } = useTrailStore();
+  // 
+  const { cityOptions, selectedCity, setSelectedCity } = useTrailStore();
+  //const cityOptions = useTrailStore((state) => state.cityOptions);
+  //const selectedCity = useTrailStore((state) => state.selectedCity);
+  //const setSelectedCity = useTrailStore((state) => state.setSelectedCity);
 
   const handleCityChange = (city: CityInterface) => {
-    debugger
     setSelectedCity(city);
   };
 
@@ -113,6 +118,7 @@ export function Events(props: EventsProps) {
               <LocationCard
                 key={`trail-row-${trail.name}`}
                 ID={trail.ID}
+                selectedCityId={selectedCity.id}
                 name={trail.name}
                 url={trail.url}
                 coordinates={trail.coordinates}

@@ -27,6 +27,14 @@ interface TrailStateInterface {
   setSelectedCity: (city: CityInterface) => void;
 }
 
+
+export const useTrailStore = create<TrailStateInterface>()((set) => ({
+  cityOptions: cityOptions,
+  selectedCity: cityOptions[0],
+  setSelectedCity: (city: CityInterface) => set((state) => ({ selectedCity: city})),
+}))
+
+/*
 export const useTrailStore = create<TrailStateInterface>((set, get) => ({
   cityOptions: cityOptions,
   selectedCity: cityOptions[0],
@@ -40,3 +48,4 @@ export const useTrailStore = create<TrailStateInterface>((set, get) => ({
     );
   },
 }));
+*/
