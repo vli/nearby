@@ -14,16 +14,16 @@ export function Trail(props: TrailProps) {
   const { t } = useTranslation('common');
   const router = useRouter();
   const { id, cityId } = router.query;
-  
+
   // Not working with Nextjs?
   //const selectedCity = useTrailStore((state) => state.selectedCity);
 
   const [queryEnabled, setQueryEnabled] = useState(true);
   const [place, setPlace] = useState<PlacesInterface>(null);
   const [errorText, setErrorText] = useState<string>(null);
-  
+
   //const places = usePlaces(queryEnabled, selectedCity.id);
-  const places = usePlaces(queryEnabled, cityId);
+  const places = usePlaces(queryEnabled, cityId as string);
 
   useEffect(() => {
     if (id && places.isSuccess) {
