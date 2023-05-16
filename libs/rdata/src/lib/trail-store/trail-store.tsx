@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { produce } from 'immer';
 
 enum CityName {
@@ -39,6 +39,4 @@ export const useTrailStore = create<TrailStateInterface>((set, get) => ({
       })
     );
   },
-  // setSelectedLocation: (locationId) => set({ selectedLocationId: locationId }),
-  // setSelectedTrail: (trailId) => set({ selectedTrail: trailId }),
 }));

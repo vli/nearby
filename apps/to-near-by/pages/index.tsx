@@ -54,10 +54,10 @@ export function Events(props: EventsProps) {
     cityOptions,
     selectedCity,
     setSelectedCity,
-    //setSelectedLocation,
   } = useTrailStore();
 
   const handleCityChange = (city: CityInterface) => {
+    debugger
     setSelectedCity(city);
   };
 

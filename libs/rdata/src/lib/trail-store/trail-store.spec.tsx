@@ -1,24 +1,17 @@
-import { render, renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { useTrailStore } from './trail-store';
 
 describe('useTraitStore', () => {
   it('should update selectedCity correctly', () => {
     const { result } = renderHook(() => useTrailStore());
-
+    const city =  {
+      id: "5273",
+      name: "Tallinn"
+    }
     act(() => {
-      result.current.setSelectedCity('New York');
+      result.current.setSelectedCity( city);
     });
 
-    expect(result.current.selectedCity).toBe('New York');
-  });
-
-  it('should update selectedTrail correctly', () => {
-    const { result } = renderHook(() => useTrailStore());
-
-    act(() => {
-      result.current.setSelectedTrail(1);
-    });
-
-    expect(result.current.selectedTrail).toBe(1);
+    expect(result.current.selectedCity.name).toBe('Tallinn');
   });
 });
